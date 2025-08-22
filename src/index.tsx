@@ -1,16 +1,11 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
-import { serveStatic } from 'hono/cloudflare-workers'
 import { renderer } from './renderer'
 
 const app = new Hono()
 
 // Enable CORS for API routes
 app.use('/api/*', cors())
-
-// Serve static files from public directory
-app.use('/static/*', serveStatic({ root: './public' }))
-app.use('/*', serveStatic({ root: './public' }))
 
 app.use(renderer)
 
@@ -149,7 +144,7 @@ function HomePage() {
               <p>Samal ajal kui teised ootavad nädalaid pakkumist, saad sina juba homme näha oma tulevast veebilehte!</p>
             </div>
             <div className="hero-cta">
-              <button className="btn btn-primary btn-large" onclick="scrollToSection('contact')">
+              <button className="btn btn-primary btn-large" onClick={() => window.scrollToSection('contact')}>
                 SAA TASUTA NÄIDIS OMA TULEVAST VEEBILEHEST
               </button>
             </div>
@@ -226,7 +221,7 @@ function HomePage() {
           <div className="pricing-calculator">
             <form id="pricing-form" className="pricing-form">
               <div className="form-group">
-                <label for="website-type">Veebilehe struktuur:</label>
+                <label htmlFor="website-type">Veebilehe struktuur:</label>
                 <select id="website-type" name="websiteType" required>
                   <option value="">Vali...</option>
                   <option value="single_page">Üheleheline informatiivne</option>
@@ -249,8 +244,8 @@ function HomePage() {
                     <span>Mitmekeelne</span>
                   </label>
                 </div>
-                <div id="language-count-group" className="form-group" style="display: none;">
-                  <label for="language-count">Mitu keelt?</label>
+                <div id="language-count-group" className="form-group" style={{display: 'none'}}>
+                  <label htmlFor="language-count">Mitu keelt?</label>
                   <input type="number" id="language-count" name="languageCount" min="2" max="5" />
                 </div>
               </div>
@@ -324,18 +319,18 @@ function HomePage() {
                 </label>
               </div>
 
-              <div id="free-sample-fields" className="free-sample-fields" style="display: none;">
+              <div id="free-sample-fields" className="free-sample-fields" style={{display: 'none'}}>
                 <div className="form-group">
-                  <label for="company-name">Ettevõtte nimi:</label>
+                  <label htmlFor="company-name">Ettevõtte nimi:</label>
                   <input type="text" id="company-name" name="companyName" />
                 </div>
                 <div className="form-group">
-                  <label for="business-field">Valdkond:</label>
+                  <label htmlFor="business-field">Valdkond:</label>
                   <input type="text" id="business-field" name="businessField" />
                 </div>
                 <div className="form-group">
-                  <label for="preferences">Eelistused:</label>
-                  <textarea id="preferences" name="preferences" rows="3"></textarea>
+                  <label htmlFor="preferences">Eelistused:</label>
+                  <textarea id="preferences" name="preferences" rows={3}></textarea>
                 </div>
               </div>
 
@@ -408,29 +403,29 @@ function HomePage() {
               <form id="contact-form" className="contact-form">
                 <div className="form-row">
                   <div className="form-group">
-                    <label for="contact-name">Nimi *</label>
+                    <label htmlFor="contact-name">Nimi *</label>
                     <input type="text" id="contact-name" name="name" required />
                   </div>
                   <div className="form-group">
-                    <label for="contact-company">Firma nimi</label>
+                    <label htmlFor="contact-company">Firma nimi</label>
                     <input type="text" id="contact-company" name="company" />
                   </div>
                 </div>
                 
                 <div className="form-row">
                   <div className="form-group">
-                    <label for="contact-email">Email *</label>
+                    <label htmlFor="contact-email">Email *</label>
                     <input type="email" id="contact-email" name="email" required />
                   </div>
                   <div className="form-group">
-                    <label for="contact-phone">Telefon *</label>
+                    <label htmlFor="contact-phone">Telefon *</label>
                     <input type="tel" id="contact-phone" name="phone" required />
                   </div>
                 </div>
                 
                 <div className="form-group">
-                  <label for="contact-message">Sõnum</label>
-                  <textarea id="contact-message" name="message" rows="5"></textarea>
+                  <label htmlFor="contact-message">Sõnum</label>
+                  <textarea id="contact-message" name="message" rows={5}></textarea>
                 </div>
                 
                 <div className="form-group">
@@ -440,18 +435,18 @@ function HomePage() {
                   </label>
                 </div>
                 
-                <div id="contact-free-sample-fields" className="free-sample-fields" style="display: none;">
+                <div id="contact-free-sample-fields" className="free-sample-fields" style={{display: 'none'}}>
                   <div className="form-group">
-                    <label for="contact-company-name">Ettevõtte nimi:</label>
+                    <label htmlFor="contact-company-name">Ettevõtte nimi:</label>
                     <input type="text" id="contact-company-name" name="contactCompanyName" />
                   </div>
                   <div className="form-group">
-                    <label for="contact-business-field">Valdkond:</label>
+                    <label htmlFor="contact-business-field">Valdkond:</label>
                     <input type="text" id="contact-business-field" name="contactBusinessField" />
                   </div>
                   <div className="form-group">
-                    <label for="contact-preferences">Eelistused:</label>
-                    <textarea id="contact-preferences" name="contactPreferences" rows="3"></textarea>
+                    <label htmlFor="contact-preferences">Eelistused:</label>
+                    <textarea id="contact-preferences" name="contactPreferences" rows={3}></textarea>
                   </div>
                 </div>
                 
