@@ -251,141 +251,109 @@ function HomePage() {
       <section id="services" className="services-section">
         <div className="container">
           <div className="section-header">
-            <div className="section-badge">
-              <span>💼</span>
-              <span>Premium teenused</span>
-            </div>
-            <h2>Meie <span className="text-gradient">ekspertiis</span></h2>
-            <p>16+ aastat kogemust, tuhandeid edu lugusid</p>
+            <h2>Meie teenused</h2>
+            <p>Professionaalsed digitaalsed lahendused, mis viivad sinu äri edasi</p>
           </div>
           
           <div className="services-grid">
-            <div className="service-card featured">
-              <div className="card-glow"></div>
-              <div className="service-header">
-                <div className="service-icon primary">
-                  <i className="fas fa-globe"></i>
-                  <div className="icon-glow"></div>
-                </div>
-                <div className="service-badge">Most Popular</div>
+            <div className="service-card">
+              <div className="service-icon">
+                <i className="fas fa-globe"></i>
               </div>
               <h3>Veebilehtede arendus</h3>
-              <p>Premium veebilahendused, mis muudavad külastajaid klientideks</p>
+              <p>Moodsad, kiirgad ja kasutajasõbralikud veebilehed, mis konverteerivad külastajaid klientideks.</p>
               
-              <div className="service-stats">
-                <div className="stat-item">
-                  <span className="stat-number">200+</span>
-                  <span className="stat-label">Veebilehte</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">99%</span>
-                  <span className="stat-label">Uptime</span>
-                </div>
-              </div>
-              
-              <ul className="service-features premium">
-                <li><i className="fas fa-crown"></i> <strong>Premium disain</strong> - unikaalne välimus</li>
-                <li><i className="fas fa-rocket"></i> <strong>Lightning fast</strong> - alla 2 sekundi</li>
-                <li><i className="fas fa-shield-alt"></i> <strong>Enterprise turvalisus</strong></li>
-                <li><i className="fas fa-chart-line"></i> <strong>SEO domineerimine</strong></li>
-                <li><i className="fas fa-mobile-alt"></i> <strong>Mobile-first</strong> lähenemine</li>
+              <ul className="service-features">
+                <li><i className="fas fa-check"></i> Responsive disain kõigile seadmetele</li>
+                <li><i className="fas fa-check"></i> SEO optimeeritud struktuur</li>
+                <li><i className="fas fa-check"></i> Kiire laadimine (&lt;3 sekundit)</li>
+                <li><i className="fas fa-check"></i> Turvaline ja stabiilne</li>
+                <li><i className="fas fa-check"></i> Google Analytics integratsioon</li>
               </ul>
               
-              <div className="service-cta">
-                <button className="btn btn-service-primary">
-                  <span>Alusta kohe</span>
-                  <i className="fas fa-arrow-right"></i>
+              <div className="service-footer">
+                <div className="service-price">
+                  <span className="price-from">alates</span>
+                  <span className="price-amount">500€</span>
+                </div>
+                <button className="btn btn-service" onClick={() => window.scrollToSection('pricing')}>
+                  Arvuta hind
                 </button>
-                <span className="price-tag">alates 500€</span>
               </div>
             </div>
             
-            <div className="service-card">
-              <div className="service-header">
-                <div className="service-icon secondary">
-                  <i className="fas fa-mobile-alt"></i>
-                  <div className="icon-glow"></div>
-                </div>
+            <div className="service-card featured">
+              <div className="featured-badge">Populaarseim</div>
+              <div className="service-icon">
+                <i className="fas fa-mobile-alt"></i>
               </div>
               <h3>Mobiilirakendused</h3>
-              <p>Native ja PWA lahendused miljonite kasutajatega</p>
-              
-              <div className="service-stats">
-                <div className="stat-item">
-                  <span className="stat-number">50+</span>
-                  <span className="stat-label">Rakendust</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">4.8★</span>
-                  <span className="stat-label">Keskmine hinnang</span>
-                </div>
-              </div>
+              <p>Native iOS ja Android rakendused, mis pakuvad suurepärast kasutajakogemust ja jõudlust.</p>
               
               <ul className="service-features">
-                <li><i className="fas fa-apple"></i> iOS & Android native</li>
-                <li><i className="fas fa-bolt"></i> PWA tehnoloogia</li>
-                <li><i className="fas fa-store"></i> App Store optimeerimine</li>
-                <li><i className="fas fa-users"></i> Kasutajakogemuse disain</li>
-                <li><i className="fas fa-sync"></i> Reaalajas sünkroniseerimine</li>
+                <li><i className="fas fa-check"></i> Native arendus iOS & Android</li>
+                <li><i className="fas fa-check"></i> App Store optimeerimine</li>
+                <li><i className="fas fa-check"></i> Push-teadete tugi</li>
+                <li><i className="fas fa-check"></i> Offline funktsioonid</li>
+                <li><i className="fas fa-check"></i> Analytics ja crash reporting</li>
               </ul>
               
-              <div className="service-cta">
-                <button className="btn btn-service-secondary">
-                  <span>Uuri lähemalt</span>
-                  <i className="fas fa-arrow-right"></i>
+              <div className="service-footer">
+                <div className="service-price">
+                  <span className="price-from">alates</span>
+                  <span className="price-amount">1500€</span>
+                </div>
+                <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
+                  Konsultatsioon
                 </button>
-                <span className="price-tag">alates 1500€</span>
               </div>
             </div>
             
             <div className="service-card">
-              <div className="service-header">
-                <div className="service-icon tertiary">
-                  <i className="fas fa-cogs"></i>
-                  <div className="icon-glow"></div>
-                </div>
+              <div className="service-icon">
+                <i className="fas fa-tools"></i>
               </div>
-              <h3>Premium tugi</h3>
-              <p>24/7 tehniline tugi ja jooksvad arendused</p>
-              
-              <div className="service-stats">
-                <div className="stat-item">
-                  <span className="stat-number">&lt;1h</span>
-                  <span className="stat-label">Reaktsiooni aeg</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">100%</span>
-                  <span className="stat-label">Lahendatud</span>
-                </div>
-              </div>
+              <h3>Hooldus & tugi</h3>
+              <p>Jooksev tehnilline tugi, uuendused ja optimeerimine, et sinu digitaalne lahendus toimiks tõrgeteta.</p>
               
               <ul className="service-features">
-                <li><i className="fas fa-headset"></i> 24/7 premium tugi</li>
-                <li><i className="fas fa-chart-bar"></i> Google Analytics Pro</li>
-                <li><i className="fas fa-shield-check"></i> Automaatsed varukoopiad</li>
-                <li><i className="fas fa-sync-alt"></i> Jooksvad uuendused</li>
-                <li><i className="fas fa-tachometer-alt"></i> Jõudluse monitooring</li>
+                <li><i className="fas fa-check"></i> 24/7 monitooring</li>
+                <li><i className="fas fa-check"></i> Regulaarsed uuendused</li>
+                <li><i className="fas fa-check"></i> Turvalisuse auditid</li>
+                <li><i className="fas fa-check"></i> Jõudluse optimeerimine</li>
+                <li><i className="fas fa-check"></i> Varundamine ja taastamine</li>
               </ul>
               
-              <div className="service-cta">
-                <button className="btn btn-service-secondary">
-                  <span>Vali pakett</span>
-                  <i className="fas fa-arrow-right"></i>
+              <div className="service-footer">
+                <div className="service-price">
+                  <span className="price-from">alates</span>
+                  <span className="price-amount">99€</span>
+                  <span className="price-period">/kuu</span>
+                </div>
+                <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
+                  Vali pakett
                 </button>
-                <span className="price-tag">alates 99€/kuu</span>
               </div>
             </div>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="services-bottom-cta">
-            <div className="cta-content">
-              <h3>Ei leia sobivat lahendust?</h3>
-              <p>Räägime sinu spetsiifilistest vajadustest ja loome täpselt sinu vajaduste järgi lahenduse.</p>
-              <button className="btn btn-outline-primary" onClick={() => window.scrollToSection('contact')}>
-                <i className="fas fa-comments"></i>
-                Alustame vestlust
-              </button>
+          {/* Stats Section */}
+          <div className="services-stats">
+            <div className="stat-card">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Projekti lõpetatud</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">16+</div>
+              <div className="stat-label">Aastat kogemust</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">98%</div>
+              <div className="stat-label">Klientide rahulolu</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">24h</div>
+              <div className="stat-label">Esimese näidise aeg</div>
             </div>
           </div>
         </div>
