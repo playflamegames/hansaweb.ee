@@ -132,26 +132,118 @@ function HomePage() {
     <div>
       {/* Hero Section */}
       <section id="hero" className="hero-section">
+        {/* Animated Background */}
+        <div className="hero-background">
+          <div className="gradient-orb orb-1"></div>
+          <div className="gradient-orb orb-2"></div>
+          <div className="gradient-orb orb-3"></div>
+          <div className="floating-elements">
+            <div className="floating-icon" style={{animationDelay: '0s'}}><i className="fas fa-code"></i></div>
+            <div className="floating-icon" style={{animationDelay: '2s'}}><i className="fas fa-mobile-alt"></i></div>
+            <div className="floating-icon" style={{animationDelay: '4s'}}><i className="fas fa-rocket"></i></div>
+            <div className="floating-icon" style={{animationDelay: '6s'}}><i className="fas fa-chart-line"></i></div>
+            <div className="floating-icon" style={{animationDelay: '8s'}}><i className="fas fa-palette"></i></div>
+          </div>
+        </div>
+
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-headline">
-              Veebilehe loomine ei maksa tänapäeval enam tuhandeid
-            </h1>
-            <p className="hero-subheadline">
-              Lihtsa veebilehe hinnad alates 500€ - võtmed kätte lahendus koos kogu sinu ettevõtte infoga
-            </p>
-            <div className="hero-hook">
-              <p>Samal ajal kui teised ootavad nädalaid pakkumist, saad sina juba homme näha oma tulevast veebilehte!</p>
+            {/* Badge */}
+            <div className="hero-badge">
+              <span className="badge-icon">🚀</span>
+              <span>16+ aastat kogemust • Premium kvaliteet</span>
             </div>
+
+            {/* Main Headline */}
+            <h1 className="hero-headline">
+              <span className="headline-highlight">Veebilehe loomine</span><br/>
+              <span className="headline-normal">ei maksa tänapäeval enam</span><br/>
+              <span className="headline-price">tuhandeid eurosid</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="hero-subheadline">
+              <strong>Professionaalsed veebilehed alates 500€</strong><br/>
+              Võtmed kätte lahendus koos kogu sinu ettevõtte infoga
+            </p>
+
+            {/* Key Benefits */}
+            <div className="hero-benefits">
+              <div className="benefit-item">
+                <div className="benefit-icon">⚡</div>
+                <span>24h esimene näidis</span>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">🎯</div>
+                <span>AI-toetatud arendus</span>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">💎</div>
+                <span>Premium disain</span>
+              </div>
+            </div>
+
+            {/* Hook Box */}
+            <div className="hero-hook">
+              <div className="hook-icon">
+                <i className="fas fa-clock"></i>
+              </div>
+              <div className="hook-content">
+                <h3>Samal ajal kui teised ootavad nädalaid pakkumist...</h3>
+                <p>Saad sina juba <strong>homme näha</strong> oma tulevast veebilehte!</p>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
             <div className="hero-cta">
-              <button className="btn btn-primary btn-large" onClick={() => window.scrollToSection('contact')}>
-                SAA TASUTA NÄIDIS OMA TULEVAST VEEBILEHEST
+              <button className="btn btn-primary btn-mega glow-effect" onClick={() => window.scrollToSection('contact')}>
+                <span className="btn-icon">🎨</span>
+                <span className="btn-text">
+                  <strong>SAA TASUTA NÄIDIS</strong>
+                  <small>Oma tulevast veebilehest</small>
+                </span>
+                <div className="btn-shine"></div>
+              </button>
+              <button className="btn btn-secondary btn-large" onClick={() => window.scrollToSection('pricing')}>
+                <i className="fas fa-calculator"></i>
+                Arvuta hind
               </button>
             </div>
+
+            {/* Social Proof */}
+            <div className="hero-social-proof">
+              <div className="social-stats">
+                <div className="stat">
+                  <span className="stat-number">50+</span>
+                  <span className="stat-label">Projekti</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-number">98%</span>
+                  <span className="stat-label">Rahulolu</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-number">24h</span>
+                  <span className="stat-label">Esimene näidis</span>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Mention */}
             <div className="hero-ai-mention">
-              <p><i className="fas fa-robot"></i> Kasutame moodsaid AI lahendusi, et tulemus saaks tehniliselt täiuslik</p>
+              <div className="ai-icon">
+                <i className="fas fa-brain"></i>
+              </div>
+              <p>Powered by <strong>AI & 16-year expertise</strong> - tehniliselt täiuslik tulemus garanteeritud</p>
             </div>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="scroll-indicator">
+          <div className="scroll-arrow">
+            <i className="fas fa-chevron-down"></i>
+          </div>
+          <span>Vaata meie teenuseid</span>
         </div>
       </section>
 
@@ -159,52 +251,141 @@ function HomePage() {
       <section id="services" className="services-section">
         <div className="container">
           <div className="section-header">
-            <h2>Meie teenused</h2>
-            <p>Professionaalsed veebilahendused igale vajadusele</p>
+            <div className="section-badge">
+              <span>💼</span>
+              <span>Premium teenused</span>
+            </div>
+            <h2>Meie <span className="text-gradient">ekspertiis</span></h2>
+            <p>16+ aastat kogemust, tuhandeid edu lugusid</p>
           </div>
           
           <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">
-                <i className="fas fa-globe"></i>
+            <div className="service-card featured">
+              <div className="card-glow"></div>
+              <div className="service-header">
+                <div className="service-icon primary">
+                  <i className="fas fa-globe"></i>
+                  <div className="icon-glow"></div>
+                </div>
+                <div className="service-badge">Most Popular</div>
               </div>
               <h3>Veebilehtede arendus</h3>
-              <p>Alates lihtsast ühelehelisest veebilehest kuni e-poodideni</p>
-              <ul className="service-features">
-                <li><i className="fas fa-check"></i> Moodne kujundus</li>
-                <li><i className="fas fa-check"></i> Responsive disain (töötab igas seadmes)</li>
-                <li><i className="fas fa-check"></i> SEO optimeeritud</li>
-                <li><i className="fas fa-check"></i> Kiire laadimine</li>
-                <li><i className="fas fa-check"></i> Turvaline ja stabiilne</li>
+              <p>Premium veebilahendused, mis muudavad külastajaid klientideks</p>
+              
+              <div className="service-stats">
+                <div className="stat-item">
+                  <span className="stat-number">200+</span>
+                  <span className="stat-label">Veebilehte</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">99%</span>
+                  <span className="stat-label">Uptime</span>
+                </div>
+              </div>
+              
+              <ul className="service-features premium">
+                <li><i className="fas fa-crown"></i> <strong>Premium disain</strong> - unikaalne välimus</li>
+                <li><i className="fas fa-rocket"></i> <strong>Lightning fast</strong> - alla 2 sekundi</li>
+                <li><i className="fas fa-shield-alt"></i> <strong>Enterprise turvalisus</strong></li>
+                <li><i className="fas fa-chart-line"></i> <strong>SEO domineerimine</strong></li>
+                <li><i className="fas fa-mobile-alt"></i> <strong>Mobile-first</strong> lähenemine</li>
               </ul>
+              
+              <div className="service-cta">
+                <button className="btn btn-service-primary">
+                  <span>Alusta kohe</span>
+                  <i className="fas fa-arrow-right"></i>
+                </button>
+                <span className="price-tag">alates 500€</span>
+              </div>
             </div>
             
             <div className="service-card">
-              <div className="service-icon">
-                <i className="fas fa-mobile-alt"></i>
+              <div className="service-header">
+                <div className="service-icon secondary">
+                  <i className="fas fa-mobile-alt"></i>
+                  <div className="icon-glow"></div>
+                </div>
               </div>
               <h3>Mobiilirakendused</h3>
-              <p>iOS ja Android äppide arendus</p>
+              <p>Native ja PWA lahendused miljonite kasutajatega</p>
+              
+              <div className="service-stats">
+                <div className="stat-item">
+                  <span className="stat-number">50+</span>
+                  <span className="stat-label">Rakendust</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">4.8★</span>
+                  <span className="stat-label">Keskmine hinnang</span>
+                </div>
+              </div>
+              
               <ul className="service-features">
-                <li><i className="fas fa-check"></i> Native ja hybrid lahendused</li>
-                <li><i className="fas fa-check"></i> Kasutajasõbralik disain</li>
-                <li><i className="fas fa-check"></i> App Store optimeerimine</li>
-                <li><i className="fas fa-check"></i> Turvalisus ja jõudlus</li>
+                <li><i className="fas fa-apple"></i> iOS & Android native</li>
+                <li><i className="fas fa-bolt"></i> PWA tehnoloogia</li>
+                <li><i className="fas fa-store"></i> App Store optimeerimine</li>
+                <li><i className="fas fa-users"></i> Kasutajakogemuse disain</li>
+                <li><i className="fas fa-sync"></i> Reaalajas sünkroniseerimine</li>
               </ul>
+              
+              <div className="service-cta">
+                <button className="btn btn-service-secondary">
+                  <span>Uuri lähemalt</span>
+                  <i className="fas fa-arrow-right"></i>
+                </button>
+                <span className="price-tag">alates 1500€</span>
+              </div>
             </div>
             
             <div className="service-card">
-              <div className="service-icon">
-                <i className="fas fa-tools"></i>
+              <div className="service-header">
+                <div className="service-icon tertiary">
+                  <i className="fas fa-cogs"></i>
+                  <div className="icon-glow"></div>
+                </div>
               </div>
-              <h3>Lisateenused</h3>
-              <p>SEO optimeerimine, hooldus, sisuhaldus</p>
+              <h3>Premium tugi</h3>
+              <p>24/7 tehniline tugi ja jooksvad arendused</p>
+              
+              <div className="service-stats">
+                <div className="stat-item">
+                  <span className="stat-number">&lt;1h</span>
+                  <span className="stat-label">Reaktsiooni aeg</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">100%</span>
+                  <span className="stat-label">Lahendatud</span>
+                </div>
+              </div>
+              
               <ul className="service-features">
-                <li><i className="fas fa-check"></i> Google Analytics seadistamine</li>
-                <li><i className="fas fa-check"></i> Regulaarne sisu uuendamine</li>
-                <li><i className="fas fa-check"></i> Tehnilise toe 24/7</li>
-                <li><i className="fas fa-check"></i> Varukoopiad ja turvalisus</li>
+                <li><i className="fas fa-headset"></i> 24/7 premium tugi</li>
+                <li><i className="fas fa-chart-bar"></i> Google Analytics Pro</li>
+                <li><i className="fas fa-shield-check"></i> Automaatsed varukoopiad</li>
+                <li><i className="fas fa-sync-alt"></i> Jooksvad uuendused</li>
+                <li><i className="fas fa-tachometer-alt"></i> Jõudluse monitooring</li>
               </ul>
+              
+              <div className="service-cta">
+                <button className="btn btn-service-secondary">
+                  <span>Vali pakett</span>
+                  <i className="fas fa-arrow-right"></i>
+                </button>
+                <span className="price-tag">alates 99€/kuu</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="services-bottom-cta">
+            <div className="cta-content">
+              <h3>Ei leia sobivat lahendust?</h3>
+              <p>Räägime sinu spetsiifilistest vajadustest ja loome täpselt sinu vajaduste järgi lahenduse.</p>
+              <button className="btn btn-outline-primary" onClick={() => window.scrollToSection('contact')}>
+                <i className="fas fa-comments"></i>
+                Alustame vestlust
+              </button>
             </div>
           </div>
         </div>
