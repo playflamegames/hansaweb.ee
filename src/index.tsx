@@ -371,137 +371,92 @@ function HomePage() {
             <p>Saa täpne hinnapakkumine oma projektile</p>
           </div>
           
-          <div className="pricing-calculator">
-            <form id="pricing-form" className="pricing-form">
-              <div className="form-group">
-                <label htmlFor="website-type">Veebilehe struktuur:</label>
-                <select id="website-type" name="websiteType" required>
-                  <option value="">Vali...</option>
-                  <option value="single_page">Üheleheline informatiivne</option>
-                  <option value="multi_page">Vähemalt kolm eraldi lehte</option>
-                  <option value="large_site">Rohkem kui viieleheline</option>
-                  <option value="ecommerce">Veebileht koos e-poega</option>
-                  <option value="custom">Muu</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label>Keelevalik:</label>
-                <div className="radio-group">
-                  <label className="radio-label">
-                    <input type="radio" name="languages" value="single" checked />
-                    <span>Ühekeelne (Eesti keel)</span>
-                  </label>
-                  <label className="radio-label">
-                    <input type="radio" name="languages" value="multi" />
-                    <span>Mitmekeelne</span>
-                  </label>
-                </div>
-                <div id="language-count-group" className="form-group" style={{display: 'none'}}>
-                  <label htmlFor="language-count">Mitu keelt?</label>
-                  <input type="number" id="language-count" name="languageCount" min="2" max="5" />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label>Tähtaeg:</label>
-                <div className="radio-group">
-                  <label className="radio-label">
-                    <input type="radio" name="deadline" value="fast" />
-                    <span>Kiire (1-2 nädalat)</span>
-                  </label>
-                  <label className="radio-label">
-                    <input type="radio" name="deadline" value="normal" checked />
-                    <span>Tavaline (3-4 nädalat)</span>
-                  </label>
-                  <label className="radio-label">
-                    <input type="radio" name="deadline" value="flexible" />
-                    <span>Pole kiiret</span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label>Lisafunktsioonid:</label>
-                <div className="checkbox-group">
-                  <label className="checkbox-label">
-                    <input type="checkbox" name="features" value="contact_form" />
-                    <span>Kontakt vorm</span>
-                  </label>
-                  <label className="checkbox-label">
-                    <input type="checkbox" name="features" value="gallery" />
-                    <span>Galerii</span>
-                  </label>
-                  <label className="checkbox-label">
-                    <input type="checkbox" name="features" value="blog" />
-                    <span>Blog</span>
-                  </label>
-                  <label className="checkbox-label">
-                    <input type="checkbox" name="features" value="booking" />
-                    <span>Broneerimissüsteem</span>
-                  </label>
-                  <label className="checkbox-label">
-                    <input type="checkbox" name="features" value="other" />
-                    <span>Muu</span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label>Hoolduspakett:</label>
-                <div className="radio-group">
-                  <label className="radio-label">
-                    <input type="radio" name="maintenance" value="yes" />
-                    <span>Jah, soovin</span>
-                  </label>
-                  <label className="radio-label">
-                    <input type="radio" name="maintenance" value="no" checked />
-                    <span>Ei, teen ise</span>
-                  </label>
-                  <label className="radio-label">
-                    <input type="radio" name="maintenance" value="later" />
-                    <span>Hiljem otsustan</span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label className="checkbox-label">
-                  <input type="checkbox" name="freeSample" value="yes" />
-                  <span>Soovin saada tasuta lehenäidist</span>
-                </label>
-              </div>
-
-              <div id="free-sample-fields" className="free-sample-fields" style={{display: 'none'}}>
+          <div className="pricing-calculator-compact">
+            <form id="pricing-form" className="pricing-form-compact">
+              <div className="form-grid">
                 <div className="form-group">
-                  <label htmlFor="company-name">Ettevõtte nimi:</label>
-                  <input type="text" id="company-name" name="companyName" />
+                  <label htmlFor="website-type">Struktuur:</label>
+                  <select id="website-type" name="websiteType" required>
+                    <option value="">Vali...</option>
+                    <option value="single_page">Üks leht</option>
+                    <option value="multi_page">3-5 lehte</option>
+                    <option value="large_site">5+ lehte</option>
+                    <option value="ecommerce">E-pood</option>
+                    <option value="custom">Muu</option>
+                  </select>
                 </div>
+
                 <div className="form-group">
-                  <label htmlFor="business-field">Valdkond:</label>
-                  <input type="text" id="business-field" name="businessField" />
+                  <label>Keeled:</label>
+                  <div className="radio-group-inline">
+                    <label className="radio-label-compact">
+                      <input type="radio" name="languages" value="single" checked />
+                      <span>1 keel</span>
+                    </label>
+                    <label className="radio-label-compact">
+                      <input type="radio" name="languages" value="multi" />
+                      <span>Mitu</span>
+                    </label>
+                  </div>
+                  <div id="language-count-group" className="form-group-inline" style={{display: 'none'}}>
+                    <input type="number" id="language-count" name="languageCount" min="2" max="5" placeholder="Keelte arv" />
+                  </div>
                 </div>
+
                 <div className="form-group">
-                  <label htmlFor="preferences">Eelistused:</label>
-                  <textarea id="preferences" name="preferences" rows={3}></textarea>
+                  <label>Tähtaeg:</label>
+                  <div className="radio-group-inline">
+                    <label className="radio-label-compact">
+                      <input type="radio" name="deadline" value="fast" />
+                      <span>Kiire</span>
+                    </label>
+                    <label className="radio-label-compact">
+                      <input type="radio" name="deadline" value="normal" checked />
+                      <span>Tavaline</span>
+                    </label>
+                    <label className="radio-label-compact">
+                      <input type="radio" name="deadline" value="flexible" />
+                      <span>Paindlik</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <label>Lisad:</label>
+                  <div className="checkbox-group-inline">
+                    <label className="checkbox-label-compact">
+                      <input type="checkbox" name="features" value="contact_form" />
+                      <span>Vorm</span>
+                    </label>
+                    <label className="checkbox-label-compact">
+                      <input type="checkbox" name="features" value="gallery" />
+                      <span>Galerii</span>
+                    </label>
+                    <label className="checkbox-label-compact">
+                      <input type="checkbox" name="features" value="blog" />
+                      <span>Blog</span>
+                    </label>
+                    <label className="checkbox-label-compact">
+                      <input type="checkbox" name="features" value="booking" />
+                      <span>Broneering</span>
+                    </label>
+                  </div>
                 </div>
               </div>
 
-              <div className="pricing-result">
-                <div id="price-display" className="price-display">
-                  <span className="price-label">Orienteeruv hind:</span>
-                  <span className="price-amount">500€</span>
+              <div className="pricing-result-compact">
+                <div id="price-display" className="price-display-compact">
+                  <span className="price-label-compact">Hind:</span>
+                  <span className="price-amount-compact">500€</span>
                 </div>
+                <button type="submit" className="btn btn-primary btn-compact">
+                  SAA PAKKUMINE
+                </button>
               </div>
-
-              <button type="submit" className="btn btn-primary btn-large">
-                SAA TÄPNE HINNAPAKKUMINE
-              </button>
             </form>
 
-            <div className="pricing-disclaimer">
-              <p><strong>Märkus:</strong> See on informatiivne hinnakalkulaator. Täpne hinnapakkumine tehakse individuaalse läbirääkimise käigus, arvestades kõiki sinu spetsiifilisi vajadusi ja soove.</p>
-              <p>Lõplik hind võib erineda sõltuvalt projekti keerukusest, disaini nõuetest ja lisafunktsioonidest. Võta ühendust täpse pakkumise saamiseks!</p>
+            <div className="pricing-disclaimer-compact">
+              <p><i className="fas fa-info-circle"></i> Orienteeruv hind. Täpne pakkumine individuaalse konsultatsiooni käigus.</p>
             </div>
           </div>
         </div>
@@ -537,6 +492,10 @@ function HomePage() {
                   <i className="fas fa-rocket"></i>
                   <span>Innovaatilised tehnoloogilised lahendused</span>
                 </div>
+                <div className="about-feature">
+                  <i className="fas fa-euro-sign"></i>
+                  <span>Parimad hinnad oma partneritele</span>
+                </div>
               </div>
             </div>
           </div>
@@ -547,13 +506,12 @@ function HomePage() {
       <section id="contact" className="contact-section">
         <div className="container">
           <div className="section-header">
-            <h2>Võta ühendust</h2>
-            <p>Alustame sinu projekti juba täna!</p>
+            <h2>Alustame sinu projekti</h2>
+            <p>Võta ühendust ja saa tasuta konsultatsioon + 50% soodustus</p>
           </div>
           
-          <div className="contact-content">
-            <div className="contact-form-wrapper">
-              <form id="contact-form" className="contact-form">
+          <div className="contact-form-centered">
+            <form id="contact-form" className="contact-form">
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="contact-name">Nimi *</label>
@@ -578,7 +536,7 @@ function HomePage() {
                 
                 <div className="form-group">
                   <label htmlFor="contact-message">Sõnum</label>
-                  <textarea id="contact-message" name="message" rows={5}></textarea>
+                  <textarea id="contact-message" name="message" rows={4}></textarea>
                 </div>
                 
                 <div className="form-group">
@@ -599,7 +557,7 @@ function HomePage() {
                   </div>
                   <div className="form-group">
                     <label htmlFor="contact-preferences">Eelistused:</label>
-                    <textarea id="contact-preferences" name="contactPreferences" rows={3}></textarea>
+                    <textarea id="contact-preferences" name="contactPreferences" rows={2}></textarea>
                   </div>
                 </div>
                 
@@ -607,41 +565,6 @@ function HomePage() {
                   SAADA SÕNUM
                 </button>
               </form>
-            </div>
-            
-            <div className="contact-info">
-              <div className="contact-info-item">
-                <i className="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p><a href="mailto:info@hansaweb.ee">info@hansaweb.ee</a></p>
-                </div>
-              </div>
-              
-              <div className="contact-info-item">
-                <i className="fas fa-phone"></i>
-                <div>
-                  <h4>Telefon</h4>
-                  <p><a href="tel:+37255550000">+372 5555 0000</a></p>
-                </div>
-              </div>
-              
-              <div className="contact-info-item">
-                <i className="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Aadress</h4>
-                  <p>Koidula 33, Rakvere, Eesti</p>
-                </div>
-              </div>
-              
-              <div className="contact-info-item">
-                <i className="fas fa-clock"></i>
-                <div>
-                  <h4>Tööaeg</h4>
-                  <p>E-R 9:00-18:00</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
