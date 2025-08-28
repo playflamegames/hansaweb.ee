@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "HansaWeb - Professionaalsed veebilehed alates 500€",
+    "description": "Professionaalsete veebilehtede ja mobiilirakenduste arendus. Lihtsa veebilehe hinnad alates 500€. Samal ajal kui teised ootavad nädalaid, saad sina juba homme näha oma tulevast veebilehte!",
+    "keywords": "veebileht, koduleht, e-pood, mobiilirakendus, SEO, Eesti, Rakvere"
+  },
+  "nav": {
+    "home": "Avaleht",
+    "services": "Teenused",
+    "pricing": "Hinnad",
+    "about": "Meist",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "headline": "Veebilehe loomine ei maksa tänapäeval enam tuhandeid",
+    "subheadline": "Lihtsa veebilehe hinnad alates 500€ - võtmed kätte lahendus koos kogu sinu ettevõtte infoga",
+    "hook": "Samal ajal kui teised ootavad nädalaid pakkumist, saad sina juba homme näha oma tulevast veebilehte!",
+    "cta_primary": "SAA TASUTA NÄIDIS OMA TULEVAST VEEBILEHEST",
+    "ai_mention": "Kasutame moodsaid AI lahendusi, et tulemus saaks tehniliselt täiuslik"
+  },
+  "services": {
+    "title": "Meie teenused",
+    "subtitle": "Professionaalsed veebilahendused igale vajadusele",
+    "web_development": {
+      "title": "Veebilehtede arendus",
+      "description": "Alates lihtsast ühelehelisest veebilehest kuni e-poodideni",
+      "features": [
+        "Moodne kujundus",
+        "Responsive disain (töötab igas seadmes)",
+        "SEO optimeeritud", 
+        "Kiire laadimine",
+        "Turvaline ja stabiilne"
+      ]
+    },
+    "mobile_apps": {
+      "title": "Mobiilirakendused",
+      "description": "iOS ja Android äppide arendus",
+      "features": [
+        "Native ja hybrid lahendused",
+        "Kasutajasõbralik disain",
+        "App Store optimeerimine",
+        "Turvalisus ja jõudlus"
+      ]
+    },
+    "additional": {
+      "title": "Lisateenused",
+      "description": "SEO optimeerimine, hooldus, sisuhaldus",
+      "features": [
+        "Google Analytics seadistamine",
+        "Regulaarne sisu uuendamine",
+        "Tehnilise toe 24/7",
+        "Varukoopiad ja turvalisus"
+      ]
+    }
+  },
+  "pricing": {
+    "title": "Hinnakalkulaator",
+    "subtitle": "Saa täpne hinnapakkumine oma projektile",
+    "form": {
+      "website_type": {
+        "label": "Veebilehe struktuur",
+        "options": {
+          "single_page": "Üheleheline informatiivne",
+          "multi_page": "Vähemalt kolm eraldi lehte",
+          "large_site": "Rohkem kui viieleheline",
+          "ecommerce": "Veebileht koos e-poega",
+          "custom": "Muu"
+        }
+      },
+      "languages": {
+        "label": "Keelevalik",
+        "single": "Ühekeelne (Eesti keel)",
+        "multi": "Mitmekeelne",
+        "count": "Mitu keelt?"
+      },
+      "deadline": {
+        "label": "Tähtaeg",
+        "fast": "Kiire (1-2 nädalat)",
+        "normal": "Tavaline (3-4 nädalat)",
+        "flexible": "Pole kiiret"
+      },
+      "features": {
+        "label": "Lisafunktsioonid",
+        "contact_form": "Kontakt vorm",
+        "gallery": "Galerii",
+        "blog": "Blog",
+        "booking": "Broneerimissüsteem",
+        "other": "Muu"
+      },
+      "maintenance": {
+        "label": "Hoolduspakett",
+        "yes": "Jah, soovin",
+        "no": "Ei, teen ise",
+        "later": "Hiljem otsustan"
+      },
+      "free_sample": {
+        "label": "Soovin saada tasuta lehenäidist",
+        "company": "Ettevõtte nimi",
+        "field": "Valdkond",
+        "preferences": "Eelistused"
+      }
+    },
+    "cta": "SAA TÄPNE HINNAPAKKUMINE",
+    "disclaimer": "See on informatiivne hinnakalkulaator. Täpne hinnapakkumine tehakse individuaalse läbirääkimise käigus, arvestades kõiki sinu spetsiifilisi vajadusi ja soove.",
+    "final_note": "Lõplik hind võib erineda sõltuvalt projekti keerukusest, disaini nõuetest ja lisafunktsioonidest. Võta ühendust täpse pakkumise saamiseks!"
+  },
+  "about": {
+    "title": "Meist",
+    "subtitle": "Usaldusväärne partner sinu digitaalses arengus",
+    "experience": "16+ aastat kogemust tehnoloogia valdkonnas",
+    "specialization": "Spetsialiseerunud mängude arendusele (Playflame)",
+    "expansion": "Laiendame nüüd oma professionaalseid teenuseid ja teadmisi Baltikumi turule",
+    "team": "Kogenud ja usaldusväärne meeskond",
+    "partner": "Sinu digitaalse edu partner"
+  },
+  "contact": {
+    "title": "Võta ühendust",
+    "subtitle": "Alustame sinu projekti juba täna!",
+    "form": {
+      "name": "Nimi",
+      "company": "Firma nimi",
+      "email": "Email",
+      "phone": "Telefon",
+      "message": "Sõnum",
+      "free_sample": "Soovin saada tasuta lehenäidist",
+      "submit": "SAADA SÕNUM"
+    },
+    "info": {
+      "email": "info@hansaweb.ee",
+      "phone": "+372 5555 0000",
+      "address": "Koidula 33, Rakvere, Eesti",
+      "hours": "Tööaeg: E-R 9:00-18:00"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 HansaWeb. Kõik õigused kaitstud.",
+    "privacy": "Privaatsuspoliitika",
+    "terms": "Teenuste tingimused",
+    "made_with": "Loodud AI ja armastusega Eestis"
+  }
+}

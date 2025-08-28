@@ -25,7 +25,7 @@ export const renderer = jsxRenderer(({ children }) => {
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
         
         {/* Custom Styles */}
-        <link href="/style.css" rel="stylesheet" />
+        <link href="/style.css?v=3" rel="stylesheet" />
         
         {/* Tailwind Config */}
         <script dangerouslySetInnerHTML={{
@@ -128,8 +128,8 @@ export const renderer = jsxRenderer(({ children }) => {
                 <h4 className="text-lg font-semibold mb-4">Teenused</h4>
                 <ul className="space-y-2 text-gray-300">
                   <li><a href="#services" className="hover:text-primary-400 transition duration-300">Veebilehtede arendus</a></li>
-                  <li><a href="#services" className="hover:text-primary-400 transition duration-300">Mobiilirakendused</a></li>
                   <li><a href="#services" className="hover:text-primary-400 transition duration-300">SEO optimeerimine</a></li>
+                  <li><a href="#pricing" className="hover:text-primary-400 transition duration-300">Hinnakalkulaator</a></li>
                   <li><a href="#services" className="hover:text-primary-400 transition duration-300">Hooldus</a></li>
                 </ul>
               </div>

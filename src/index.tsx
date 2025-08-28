@@ -139,7 +139,7 @@ function HomePage() {
           <div className="gradient-orb orb-3"></div>
           <div className="floating-elements">
             <div className="floating-icon" style={{animationDelay: '0s'}}><i className="fas fa-code"></i></div>
-            <div className="floating-icon" style={{animationDelay: '2s'}}><i className="fas fa-mobile-alt"></i></div>
+            <div className="floating-icon" style={{animationDelay: '2s'}}><i className="fas fa-search"></i></div>
             <div className="floating-icon" style={{animationDelay: '4s'}}><i className="fas fa-rocket"></i></div>
             <div className="floating-icon" style={{animationDelay: '6s'}}><i className="fas fa-chart-line"></i></div>
             <div className="floating-icon" style={{animationDelay: '8s'}}><i className="fas fa-palette"></i></div>
@@ -196,7 +196,7 @@ function HomePage() {
 
             {/* CTA Buttons */}
             <div className="hero-cta">
-              <button className="btn btn-primary btn-mega glow-effect" onClick={() => window.scrollToSection('contact')}>
+              <button className="btn btn-primary btn-mega glow-effect" onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
                 <span className="btn-icon">🎨</span>
                 <span className="btn-text">
                   <strong>SAA TASUTA NÄIDIS</strong>
@@ -204,7 +204,7 @@ function HomePage() {
                 </span>
                 <div className="btn-shine"></div>
               </button>
-              <button className="btn btn-secondary btn-large" onClick={() => window.scrollToSection('pricing')}>
+              <button className="btn btn-secondary btn-large" onClick={() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})}>
                 <i className="fas fa-calculator"></i>
                 Arvuta hind
               </button>
@@ -239,7 +239,7 @@ function HomePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="scroll-indicator">
+        <div className="scroll-indicator" onClick={() => document.getElementById('services').scrollIntoView({behavior: 'smooth'})}>
           <div className="scroll-arrow">
             <i className="fas fa-chevron-down"></i>
           </div>
@@ -278,7 +278,7 @@ function HomePage() {
                     <span className="price-current">Uutele klientidele: 500€</span>
                   </div>
                 </div>
-                <button className="btn btn-service" onClick={() => window.scrollToSection('pricing')}>
+                <button className="btn btn-service" onClick={() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})}>
                   Arvuta hind
                 </button>
               </div>
@@ -286,28 +286,28 @@ function HomePage() {
             
             <div className="service-card">
               <div className="service-icon">
-                <i className="fas fa-mobile-alt"></i>
+                <i className="fas fa-search"></i>
               </div>
-              <h3>Mobiilirakendused</h3>
-              <p>Native iOS ja Android rakendused, mis pakuvad suurepärast kasutajakogemust ja jõudlust.</p>
+              <h3>SEO optimeerimine</h3>
+              <p>Tagame, et sinu veebileht oleks Google'is hästi leitav ja meelitaks ligi õigeid kliente.</p>
               
               <ul className="service-features">
-                <li><i className="fas fa-check"></i> Native arendus iOS & Android</li>
-                <li><i className="fas fa-check"></i> App Store optimeerimine</li>
-                <li><i className="fas fa-check"></i> Push-teadete tugi</li>
-                <li><i className="fas fa-check"></i> Offline funktsioonid</li>
-                <li><i className="fas fa-check"></i> Analytics ja crash reporting</li>
+                <li><i className="fas fa-check"></i> Märksõnade analüüs ja optimeerimine</li>
+                <li><i className="fas fa-check"></i> Tehnilise SEO audit</li>
+                <li><i className="fas fa-check"></i> Google Analytics seadistamine</li>
+                <li><i className="fas fa-check"></i> Sisu optimeerimine</li>
+                <li><i className="fas fa-check"></i> Lokaalne SEO (Google My Business)</li>
               </ul>
               
               <div className="service-footer">
                 <div className="service-price">
                   <div className="price-discount">
-                    <span className="price-old">Tavahind: 3000€</span>
-                    <span className="price-current">Uutele klientidele: 1500€</span>
+                    <span className="price-old">Tavahind: 800€</span>
+                    <span className="price-current">Uutele klientidele: 400€</span>
                   </div>
                 </div>
-                <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
-                  Konsultatsioon
+                <button className="btn btn-service" onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
+                  Saa pakkumine
                 </button>
               </div>
             </div>
@@ -334,7 +334,7 @@ function HomePage() {
                     <span className="price-note">Esimene kuu tasuta</span>
                   </div>
                 </div>
-                <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
+                <button className="btn btn-service" onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
                   Vali pakett
                 </button>
               </div>
@@ -373,73 +373,77 @@ function HomePage() {
           
           <div className="pricing-calculator-compact">
             <form id="pricing-form" className="pricing-form-compact">
-              <div className="form-grid">
-                <div className="form-group">
-                  <label htmlFor="website-type">Struktuur:</label>
-                  <select id="website-type" name="websiteType" required>
-                    <option value="">Vali...</option>
-                    <option value="single_page">Üks leht</option>
-                    <option value="multi_page">3-5 lehte</option>
-                    <option value="large_site">5+ lehte</option>
-                    <option value="ecommerce">E-pood</option>
-                    <option value="custom">Muu</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label>Keeled:</label>
-                  <div className="radio-group-inline">
-                    <label className="radio-label-compact">
-                      <input type="radio" name="languages" value="single" checked />
-                      <span>1 keel</span>
-                    </label>
-                    <label className="radio-label-compact">
-                      <input type="radio" name="languages" value="multi" />
-                      <span>Mitu</span>
-                    </label>
+              <div className="form-grid-professional">
+                <div className="form-row-professional">
+                  <div className="form-group-professional">
+                    <label htmlFor="website-type">Veebilehe struktuur</label>
+                    <select id="website-type" name="websiteType" required>
+                      <option value="">Vali struktuur...</option>
+                      <option value="single_page">Üks leht (Landing page)</option>
+                      <option value="multi_page">3-5 lehte (Ettevõtte leht)</option>
+                      <option value="large_site">5+ lehte (Suur veebileht)</option>
+                      <option value="ecommerce">E-pood</option>
+                      <option value="custom">Muu (konsultatsioon)</option>
+                    </select>
                   </div>
-                  <div id="language-count-group" className="form-group-inline" style={{display: 'none'}}>
-                    <input type="number" id="language-count" name="languageCount" min="2" max="5" placeholder="Keelte arv" />
-                  </div>
-                </div>
 
-                <div className="form-group">
-                  <label>Tähtaeg:</label>
-                  <div className="radio-group-inline">
-                    <label className="radio-label-compact">
-                      <input type="radio" name="deadline" value="fast" />
-                      <span>Kiire</span>
-                    </label>
-                    <label className="radio-label-compact">
-                      <input type="radio" name="deadline" value="normal" checked />
-                      <span>Tavaline</span>
-                    </label>
-                    <label className="radio-label-compact">
-                      <input type="radio" name="deadline" value="flexible" />
-                      <span>Paindlik</span>
-                    </label>
+                  <div className="form-group-professional">
+                    <label>Keelevalik</label>
+                    <div className="radio-group-professional">
+                      <label className="radio-label-professional">
+                        <input type="radio" name="languages" value="single" checked />
+                        <span>Ühekeelne (eesti keel)</span>
+                      </label>
+                      <label className="radio-label-professional">
+                        <input type="radio" name="languages" value="multi" />
+                        <span>Mitmekeelne</span>
+                      </label>
+                    </div>
+                    <div id="language-count-group" className="form-group-inline-professional" style={{display: 'none'}}>
+                      <input type="number" id="language-count" name="languageCount" min="2" max="5" placeholder="Keelte arv (2-5)" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="form-group">
-                  <label>Lisad:</label>
-                  <div className="checkbox-group-inline">
-                    <label className="checkbox-label-compact">
-                      <input type="checkbox" name="features" value="contact_form" />
-                      <span>Vorm</span>
-                    </label>
-                    <label className="checkbox-label-compact">
-                      <input type="checkbox" name="features" value="gallery" />
-                      <span>Galerii</span>
-                    </label>
-                    <label className="checkbox-label-compact">
-                      <input type="checkbox" name="features" value="blog" />
-                      <span>Blog</span>
-                    </label>
-                    <label className="checkbox-label-compact">
-                      <input type="checkbox" name="features" value="booking" />
-                      <span>Broneering</span>
-                    </label>
+                <div className="form-row-professional">
+                  <div className="form-group-professional">
+                    <label>Projekti tähtaeg</label>
+                    <div className="radio-group-professional">
+                      <label className="radio-label-professional">
+                        <input type="radio" name="deadline" value="fast" />
+                        <span>Kiire (1-2 nädalat) +50%</span>
+                      </label>
+                      <label className="radio-label-professional">
+                        <input type="radio" name="deadline" value="normal" checked />
+                        <span>Tavaline (3-4 nädalat)</span>
+                      </label>
+                      <label className="radio-label-professional">
+                        <input type="radio" name="deadline" value="flexible" />
+                        <span>Paindlik (5+ nädalat) -10%</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="form-group-professional">
+                    <label>Lisafunktsioonid</label>
+                    <div className="checkbox-group-professional">
+                      <label className="checkbox-label-professional">
+                        <input type="checkbox" name="features" value="contact_form" />
+                        <span>Kontaktvorm (+50€)</span>
+                      </label>
+                      <label className="checkbox-label-professional">
+                        <input type="checkbox" name="features" value="gallery" />
+                        <span>Fotogalerii (+100€)</span>
+                      </label>
+                      <label className="checkbox-label-professional">
+                        <input type="checkbox" name="features" value="blog" />
+                        <span>Blogi süsteem (+200€)</span>
+                      </label>
+                      <label className="checkbox-label-professional">
+                        <input type="checkbox" name="features" value="booking" />
+                        <span>Broneerimissüsteem (+300€)</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -507,7 +511,7 @@ function HomePage() {
         <div className="container">
           <div className="section-header">
             <h2>Alustame sinu projekti</h2>
-            <p>Võta ühendust ja saa tasuta konsultatsioon + 50% soodustus</p>
+            <p>Võta ühendust ja saa tasuta konsultatsioon + 50% soodustus | WEBHOOK TEST 🚀</p>
           </div>
           
           <div className="contact-form-centered">

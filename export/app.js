@@ -62,13 +62,13 @@ function scrollToSection(sectionId) {
 // Pricing Calculator
 function initPricingCalculator() {
     const form = document.getElementById('pricing-form');
-    const priceDisplay = document.querySelector('.price-amount-compact');
+    const priceDisplay = document.querySelector('.price-amount');
     const languageRadios = document.querySelectorAll('input[name="languages"]');
     const languageCountGroup = document.getElementById('language-count-group');
     const freeSampleCheckbox = document.querySelector('input[name="freeSample"]');
     const freeSampleFields = document.getElementById('free-sample-fields');
     
-    if (!form) return;
+    if (!form || !priceDisplay) return;
     
     // Toggle language count field
     languageRadios.forEach(radio => {
@@ -114,9 +114,9 @@ function initPricingCalculator() {
 // Calculate price based on form inputs
 function calculatePrice() {
     const form = document.getElementById('pricing-form');
-    const priceDisplay = document.querySelector('.price-amount-compact');
+    const priceDisplay = document.querySelector('.price-amount');
     
-    if (!form) return;
+    if (!form || !priceDisplay) return;
     
     const formData = new FormData(form);
     const data = {
@@ -197,9 +197,7 @@ function calculatePrice() {
     price = Math.round(price / 50) * 50;
     
     // Update display
-    if (priceDisplay) {
-        priceDisplay.textContent = price + '€';
-    }
+    priceDisplay.textContent = price + '€';
 }
 
 // Handle pricing form submission
