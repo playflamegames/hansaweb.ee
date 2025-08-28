@@ -161,6 +161,30 @@ function initPricingCalculator() {
     
     if (!form || !priceDisplay) return;
     
+    let pricingConfig = null;
+    
+    // Load pricing configuration
+    fetch('/pricing-config.json')
+        .then(response => response.json())
+        .then(config => {
+            pricingConfig = config;
+            calculatePrice(); // Calculate initial price
+        })
+        .catch(error => {
+            console.error('Error loading pricing config:', error);
+            // Fallback to hardcoded values if config fails to load
+            pricingConfig = {
+                basePrice: { single_page: 500, multi_page: 800, large_site: 1200, ecommerce: 2000, custom: 1500 },
+                languageMultiplier: { single: 1, multi: 0.3 },
+                deadlineModifier: { fast: 1.5, normal: 1, flexible: 0.9 },
+                features: { contact_form: 100, gallery: 200, blog: 300, booking: 500, other: 250 },
+                maintenanceSetupFee: 200,
+                currency: '€',
+                roundTo: 50
+            };
+            calculatePrice();
+        });
+    
     // Language selection handler
     languageRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
@@ -186,79 +210,46 @@ function initPricingCalculator() {
         input.addEventListener('change', calculatePrice);
     });
     
-    // Price calculation function
+    // Price calculation function using config
     function calculatePrice() {
-        let basePrice = 500;
+        if (!pricingConfig) return;
+        
         const formData = new FormData(form);
         
         // Website type pricing
         const websiteType = formData.get('websiteType');
-        switch (websiteType) {
-            case 'single_page':
-                basePrice = 500;
-                break;
-            case 'multi_page':
-                basePrice = 800;
-                break;
-            case 'large_site':
-                basePrice = 1200;
-                break;
-            case 'ecommerce':
-                basePrice = 2000;
-                break;
-            case 'custom':
-                basePrice = 1500;
-                break;
-        }
+        let basePrice = pricingConfig.basePrice[websiteType] || pricingConfig.basePrice.single_page;
         
         // Language multiplier
         const languages = formData.get('languages');
         if (languages === 'multi') {
             const languageCount = parseInt(formData.get('languageCount')) || 2;
-            basePrice *= (1 + (languageCount - 1) * 0.3);
+            basePrice *= (1 + (languageCount - 1) * pricingConfig.languageMultiplier.multi);
         }
         
         // Deadline modifier
-        const deadline = formData.get('deadline');
-        if (deadline === 'fast') {
-            basePrice *= 1.5;
-        } else if (deadline === 'flexible') {
-            basePrice *= 0.9;
-        }
+        const deadline = formData.get('deadline') || 'normal';
+        basePrice *= pricingConfig.deadlineModifier[deadline] || 1;
         
         // Features
         const features = formData.getAll('features');
         features.forEach(feature => {
-            switch (feature) {
-                case 'contact_form':
-                    basePrice += 100;
-                    break;
-                case 'gallery':
-                    basePrice += 200;
-                    break;
-                case 'blog':
-                    basePrice += 300;
-                    break;
-                case 'booking':
-                    basePrice += 500;
-                    break;
-                case 'other':
-                    basePrice += 250;
-                    break;
+            if (pricingConfig.features[feature]) {
+                basePrice += pricingConfig.features[feature];
             }
         });
         
         // Maintenance package
         const maintenance = formData.get('maintenance');
         if (maintenance === 'yes') {
-            basePrice += 200; // Setup fee for maintenance
+            basePrice += pricingConfig.maintenanceSetupFee;
         }
         
-        // Round to nearest 50
-        const finalPrice = Math.round(basePrice / 50) * 50;
+        // Round to specified increment
+        const finalPrice = Math.round(basePrice / pricingConfig.roundTo) * pricingConfig.roundTo;
         
         // Update display
-        priceDisplay.textContent = `${finalPrice}€`;
+        priceDisplay.textContent = `${finalPrice}${pricingConfig.currency}`;
     }
     
     // Form submission handler

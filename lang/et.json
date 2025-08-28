@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Avaleht",
+    "services": "Teenused", 
+    "pricing": "Hinnad",
+    "about": "Meist",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "16+ aastat kogemust • Premium kvaliteet",
+    "headline1": "Veebilehe loomine",
+    "headline2": "ei maksa tänapäeval enam",
+    "headline3": "tuhandeid eurosid",
+    "pricing": "Professionaalsed veebilehed alates 500€",
+    "discount": "🎯 Uued kliendid saavad 50% soodustuse - tavahind 1000€+",
+    "cta1": "SAA TASUTA NÄIDIS",
+    "cta1Sub": "Oma tulevast veebilehest",
+    "cta2": "Arvuta hind",
+    "scrollText": "Vaata meie teenuseid"
+  },
+  "services": {
+    "title": "Meie teenused",
+    "subtitle": "Professionaalsed digitaalsed lahendused, mis viivad sinu äri edasi",
+    "web": {
+      "title": "Veebilehtede arendus",
+      "description": "Moodsad, kiirgad ja kasutajasõbralikud veebilehed, mis konverteerivad külastajaid klientideks.",
+      "priceFrom": "alates"
+    },
+    "seo": {
+      "title": "SEO optimeerimine", 
+      "description": "Tagame, et sinu veebileht oleks Google'is hästi leitav ja meelitaks ligi õigeid kliente.",
+      "priceOld": "Tavahind: 800€",
+      "priceNew": "Uutele klientidele: 400€"
+    },
+    "maintenance": {
+      "title": "Hooldus & tugi",
+      "description": "Jooksev tehnilline tugi, uuendused ja optimeerimine, et sinu digitaalne lahendus toimiks tõrgeteta.",
+      "priceFrom": "alates",
+      "pricePeriod": "/kuu"
+    }
+  },
+  "pricing": {
+    "title": "Hinnakalkulaator",
+    "subtitle": "Saa täpne hinnapakkumine oma projektile",
+    "websiteType": "Veebilehe struktuur:",
+    "languages": "Keelevalik:",
+    "deadline": "Tähtaeg:",
+    "features": "Lisafunktsioonid:",
+    "maintenance": "Hoolduspakett:",
+    "freeSample": "Soovin saada tasuta lehenäidist",
+    "submit": "SAA TÄPNE HINNAPAKKUMINE"
+  },
+  "contact": {
+    "title": "Võta ühendust",
+    "subtitle": "Alustame sinu projekti juba täna!",
+    "name": "Nimi",
+    "company": "Firma nimi",
+    "email": "Email",
+    "phone": "Telefon", 
+    "message": "Sõnum",
+    "submit": "SAADA SÕNUM"
+  }
+}

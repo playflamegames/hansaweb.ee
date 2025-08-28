@@ -1,0 +1,28 @@
+{
+  "basePrice": {
+    "single_page": 500,
+    "multi_page": 800,
+    "large_site": 1200,
+    "ecommerce": 2000,
+    "custom": 1500
+  },
+  "languageMultiplier": {
+    "single": 1,
+    "multi": 0.3
+  },
+  "deadlineModifier": {
+    "fast": 1.5,
+    "normal": 1,
+    "flexible": 0.9
+  },
+  "features": {
+    "contact_form": 100,
+    "gallery": 200,
+    "blog": 300,
+    "booking": 500,
+    "other": 250
+  },
+  "maintenanceSetupFee": 200,
+  "currency": "€",
+  "roundTo": 50
+}
