@@ -382,6 +382,28 @@ function initAnimations() {
     animatedElements.forEach(el => {
         observer.observe(el);
     });
+    
+    // Handle scroll indicator visibility
+    initScrollIndicator();
+}
+
+// Hide scroll indicator when user scrolls
+function initScrollIndicator() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (!scrollIndicator) return;
+    
+    let scrollTimeout;
+    
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        // Hide indicator when user scrolls more than 100px
+        if (scrollPosition > 100) {
+            scrollIndicator.style.opacity = '0';
+        } else {
+            scrollIndicator.style.opacity = '1';
+        }
+    });
 }
 
 // Utility function to format currency
@@ -394,5 +416,18 @@ function formatCurrency(amount) {
     }).format(amount);
 }
 
-// Global function for hero CTA button
+// Global functions for buttons
 window.scrollToSection = scrollToSection;
+
+// Global function for CTA buttons
+window.scrollToContact = function() {
+    scrollToSection('contact');
+};
+
+window.scrollToPricing = function() {
+    scrollToSection('pricing');
+};
+
+window.scrollToServices = function() {
+    scrollToSection('services');
+};

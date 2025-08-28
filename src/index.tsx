@@ -163,7 +163,7 @@ function HomePage() {
 
             {/* Subheadline */}
             <p className="hero-subheadline">
-              <strong>Professionaalsed veebilehed alates 500€</strong><br/>
+              <strong className="text-green-400">Professionaalsed veebilehed alates 500€</strong><br/>
               <span className="discount-info">🎯 Uued kliendid saavad 50% soodustuse - tavahind 1000€+</span>
             </p>
 
@@ -196,7 +196,7 @@ function HomePage() {
 
             {/* CTA Buttons */}
             <div className="hero-cta">
-              <button className="btn btn-primary btn-mega glow-effect" onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
+              <button className="btn btn-primary btn-mega glow-effect" onClick={() => window.scrollToContact()}>
                 <span className="btn-icon">🎨</span>
                 <span className="btn-text">
                   <strong>SAA TASUTA NÄIDIS</strong>
@@ -204,7 +204,7 @@ function HomePage() {
                 </span>
                 <div className="btn-shine"></div>
               </button>
-              <button className="btn btn-secondary btn-large" onClick={() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})}>
+              <button className="btn btn-secondary btn-large" onClick={() => window.scrollToPricing()}>
                 <i className="fas fa-calculator"></i>
                 Arvuta hind
               </button>
@@ -239,7 +239,7 @@ function HomePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="scroll-indicator" onClick={() => document.getElementById('services').scrollIntoView({behavior: 'smooth'})}>
+        <div className="scroll-indicator" onClick={() => window.scrollToServices()}>
           <div className="scroll-arrow">
             <i className="fas fa-chevron-down"></i>
           </div>
@@ -278,9 +278,6 @@ function HomePage() {
                     <span className="price-current">Uutele klientidele: 500€</span>
                   </div>
                 </div>
-                <button className="btn btn-service" onClick={() => document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})}>
-                  Arvuta hind
-                </button>
               </div>
             </div>
             
@@ -306,9 +303,6 @@ function HomePage() {
                     <span className="price-current">Uutele klientidele: 400€</span>
                   </div>
                 </div>
-                <button className="btn btn-service" onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
-                  Saa pakkumine
-                </button>
               </div>
             </div>
             
@@ -334,9 +328,6 @@ function HomePage() {
                     <span className="price-note">Esimene kuu tasuta</span>
                   </div>
                 </div>
-                <button className="btn btn-service" onClick={() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}>
-                  Vali pakett
-                </button>
               </div>
             </div>
           </div>
