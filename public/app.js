@@ -43,6 +43,36 @@ function initSmoothScroll() {
             }
         });
     });
+    
+    // Add event listeners for CTA buttons
+    initCTAButtons();
+}
+
+// Initialize CTA button functionality
+function initCTAButtons() {
+    // "SAA TASUTA NÄIDIS" button
+    const sampleButton = document.querySelector('.btn-mega');
+    if (sampleButton) {
+        sampleButton.addEventListener('click', function() {
+            scrollToSection('contact');
+        });
+    }
+    
+    // "Arvuta hind" button in hero
+    const priceButton = document.querySelector('.hero-cta .btn-secondary');
+    if (priceButton) {
+        priceButton.addEventListener('click', function() {
+            scrollToSection('pricing');
+        });
+    }
+    
+    // Scroll indicator
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            scrollToSection('services');
+        });
+    }
 }
 
 // Scroll to section function

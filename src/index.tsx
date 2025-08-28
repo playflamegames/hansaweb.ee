@@ -139,7 +139,7 @@ function HomePage() {
           <div className="gradient-orb orb-3"></div>
           <div className="floating-elements">
             <div className="floating-icon" style={{animationDelay: '0s'}}><i className="fas fa-code"></i></div>
-            <div className="floating-icon" style={{animationDelay: '2s'}}><i className="fas fa-mobile-alt"></i></div>
+            <div className="floating-icon" style={{animationDelay: '2s'}}><i className="fas fa-search"></i></div>
             <div className="floating-icon" style={{animationDelay: '4s'}}><i className="fas fa-rocket"></i></div>
             <div className="floating-icon" style={{animationDelay: '6s'}}><i className="fas fa-chart-line"></i></div>
             <div className="floating-icon" style={{animationDelay: '8s'}}><i className="fas fa-palette"></i></div>
@@ -163,8 +163,8 @@ function HomePage() {
 
             {/* Subheadline */}
             <p className="hero-subheadline">
-              <strong>Professionaalsed veebilehed alates 500€</strong><br/>
-              Võtmed kätte lahendus koos kogu sinu ettevõtte infoga
+              <strong className="text-green-400">Professionaalsed veebilehed alates 500€</strong><br/>
+              <span className="discount-info">🎯 Uued kliendid saavad 50% soodustuse - tavahind 1000€+</span>
             </p>
 
             {/* Key Benefits */}
@@ -196,7 +196,7 @@ function HomePage() {
 
             {/* CTA Buttons */}
             <div className="hero-cta">
-              <button className="btn btn-primary btn-mega glow-effect" onClick={() => window.scrollToSection('contact')}>
+              <button className="btn btn-primary btn-mega glow-effect" onClick={() => window.scrollToContact()}>
                 <span className="btn-icon">🎨</span>
                 <span className="btn-text">
                   <strong>SAA TASUTA NÄIDIS</strong>
@@ -204,7 +204,7 @@ function HomePage() {
                 </span>
                 <div className="btn-shine"></div>
               </button>
-              <button className="btn btn-secondary btn-large" onClick={() => window.scrollToSection('pricing')}>
+              <button className="btn btn-secondary btn-large" onClick={() => window.scrollToPricing()}>
                 <i className="fas fa-calculator"></i>
                 Arvuta hind
               </button>
@@ -239,7 +239,7 @@ function HomePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="scroll-indicator">
+        <div className="scroll-indicator" onClick={() => window.scrollToServices()}>
           <div className="scroll-arrow">
             <i className="fas fa-chevron-down"></i>
           </div>
@@ -276,36 +276,32 @@ function HomePage() {
                   <span className="price-from">alates</span>
                   <span className="price-amount">500€</span>
                 </div>
-                <button className="btn btn-service" onClick={() => window.scrollToSection('pricing')}>
-                  Arvuta hind
-                </button>
+
               </div>
             </div>
             
-            <div className="service-card featured">
-              <div className="featured-badge">Populaarseim</div>
+            <div className="service-card">
               <div className="service-icon">
-                <i className="fas fa-mobile-alt"></i>
+                <i className="fas fa-search"></i>
               </div>
-              <h3>Mobiilirakendused</h3>
-              <p>Native iOS ja Android rakendused, mis pakuvad suurepärast kasutajakogemust ja jõudlust.</p>
+              <h3>SEO optimeerimine</h3>
+              <p>Tagame, et sinu veebileht oleks Google'is hästi leitav ja meelitaks ligi õigeid kliente.</p>
               
               <ul className="service-features">
-                <li><i className="fas fa-check"></i> Native arendus iOS & Android</li>
-                <li><i className="fas fa-check"></i> App Store optimeerimine</li>
-                <li><i className="fas fa-check"></i> Push-teadete tugi</li>
-                <li><i className="fas fa-check"></i> Offline funktsioonid</li>
-                <li><i className="fas fa-check"></i> Analytics ja crash reporting</li>
+                <li><i className="fas fa-check"></i> Märksõnade analüüs ja optimeerimine</li>
+                <li><i className="fas fa-check"></i> Tehnilise SEO audit</li>
+                <li><i className="fas fa-check"></i> Google Analytics seadistamine</li>
+                <li><i className="fas fa-check"></i> Sisu optimeerimine</li>
+                <li><i className="fas fa-check"></i> Lokaalne SEO (Google My Business)</li>
               </ul>
               
               <div className="service-footer">
                 <div className="service-price">
-                  <span className="price-from">alates</span>
-                  <span className="price-amount">1500€</span>
+                  <div className="price-discount">
+                    <span className="price-old">Tavahind: 800€</span>
+                    <span className="price-current">Uutele klientidele: 400€</span>
+                  </div>
                 </div>
-                <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
-                  Konsultatsioon
-                </button>
               </div>
             </div>
             
@@ -330,9 +326,7 @@ function HomePage() {
                   <span className="price-amount">99€</span>
                   <span className="price-period">/kuu</span>
                 </div>
-                <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
-                  Vali pakett
-                </button>
+
               </div>
             </div>
           </div>
