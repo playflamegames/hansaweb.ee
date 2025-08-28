@@ -149,22 +149,22 @@ function HomePage() {
         <div className="container">
           <div className="hero-content">
             {/* Badge */}
-            <div className="hero-badge">
-              <span className="badge-icon">🚀</span>
-              <span>16+ aastat kogemust • Premium kvaliteet</span>
+            <div className="hero-badge discount-badge">
+              <span className="badge-icon">🔥</span>
+              <span>PIIRATUD AEG: -50% soodustus uutele klientidele</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="hero-headline">
-              <span className="headline-highlight">Veebilehe loomine</span><br/>
+              <span className="headline-normal">Veebilehe loomine</span><br/>
               <span className="headline-normal">ei maksa tänapäeval enam</span><br/>
-              <span className="headline-price">tuhandeid eurosid</span>
+              <span className="headline-emphasis">tuhandeid eurosid</span>
             </h1>
 
             {/* Subheadline */}
             <p className="hero-subheadline">
               <strong>Professionaalsed veebilehed alates 500€</strong><br/>
-              Võtmed kätte lahendus koos kogu sinu ettevõtte infoga
+              <span className="discount-info">🎯 Uued kliendid saavad 50% soodustuse - tavahind 1000€+</span>
             </p>
 
             {/* Key Benefits */}
@@ -273,8 +273,10 @@ function HomePage() {
               
               <div className="service-footer">
                 <div className="service-price">
-                  <span className="price-from">alates</span>
-                  <span className="price-amount">500€</span>
+                  <div className="price-discount">
+                    <span className="price-old">Tavahind: 1000€</span>
+                    <span className="price-current">Uutele klientidele: 500€</span>
+                  </div>
                 </div>
                 <button className="btn btn-service" onClick={() => window.scrollToSection('pricing')}>
                   Arvuta hind
@@ -282,8 +284,7 @@ function HomePage() {
               </div>
             </div>
             
-            <div className="service-card featured">
-              <div className="featured-badge">Populaarseim</div>
+            <div className="service-card">
               <div className="service-icon">
                 <i className="fas fa-mobile-alt"></i>
               </div>
@@ -300,8 +301,10 @@ function HomePage() {
               
               <div className="service-footer">
                 <div className="service-price">
-                  <span className="price-from">alates</span>
-                  <span className="price-amount">1500€</span>
+                  <div className="price-discount">
+                    <span className="price-old">Tavahind: 3000€</span>
+                    <span className="price-current">Uutele klientidele: 1500€</span>
+                  </div>
                 </div>
                 <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
                   Konsultatsioon
@@ -326,9 +329,10 @@ function HomePage() {
               
               <div className="service-footer">
                 <div className="service-price">
-                  <span className="price-from">alates</span>
-                  <span className="price-amount">99€</span>
-                  <span className="price-period">/kuu</span>
+                  <div className="price-discount">
+                    <span className="price-current">Alates 99€/kuu</span>
+                    <span className="price-note">Esimene kuu tasuta</span>
+                  </div>
                 </div>
                 <button className="btn btn-service" onClick={() => window.scrollToSection('contact')}>
                   Vali pakett

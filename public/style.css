@@ -460,6 +460,19 @@ html {
   color: white;
 }
 
+/* Discount Badge */
+.discount-badge {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  animation: pulse 2s infinite;
+}
+
+.discount-info {
+  color: #fbbf24;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  display: block;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
